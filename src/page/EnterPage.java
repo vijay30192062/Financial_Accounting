@@ -14,10 +14,10 @@ public class EnterPage
 	@FindBy(xpath="//div[contains(text(),'Help')]")
 	private WebElement help;
 	
-	@FindBy(linkText="About your ActiTIME")
+	@FindBy(linkText="About your actiTIME")
 	private WebElement aboutAT;
 	
-	@FindBy(xpath="//span{@class='productVersion")
+	@FindBy(xpath="//span[@class='productVersion']")
 	private WebElement version;
 	
 	public EnterPage(WebDriver driver)
