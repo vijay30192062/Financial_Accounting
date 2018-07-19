@@ -15,15 +15,18 @@ public class AutoUtils
 	//Method to take screenshot
 	public static String getPhoto(WebDriver driver,String folder)
 	{
-		String path="";
+		String path=" ";
 		try
 		{
 			String d = new Date().toString();
 			String dateTime=d.replaceAll(";", "_");
 			path=folder+dateTime+".png";
+			System.out.println(path);
 			TakesScreenshot t=(TakesScreenshot) driver;
 			File sourceFile = t.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(sourceFile, new File(path));
+			File destinationFile= new File(path);
+			FileUtils.copyDirectoryToDirectory(sourceFile, destinationFile);
+			//FileUtils.copyFile(sourceFile, new File(path));
 		
 		}
 		catch (Exception e) {
