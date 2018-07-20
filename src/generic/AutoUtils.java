@@ -13,26 +13,22 @@ import org.openqa.selenium.WebDriver;
 public class AutoUtils 
 {
 	//Method to take screenshot
-	public static String getPhoto(WebDriver driver,String folder)
+	public static String getPhoto(WebDriver driver,String folder, String fileName)
 	{
-		String path=" ";
+		
 		try
 		{
-			String d = new Date().toString();
-			String dateTime=d.replaceAll(";", "_");
-			path=folder+dateTime+".png";
-			System.out.println(path);
+			String dateTime = new Date().toString().replace(":", "_");
+			String path=folder+fileName+dateTime+".png";
 			TakesScreenshot t=(TakesScreenshot) driver;
 			File sourceFile = t.getScreenshotAs(OutputType.FILE);
-			File destinationFile= new File(path);
-			FileUtils.copyDirectoryToDirectory(sourceFile, destinationFile);
-			//FileUtils.copyFile(sourceFile, new File(path));
+			FileUtils.copyFile(sourceFile, new File(path));
 		
 		}
 		catch (Exception e) {
 			// TODO: handle exception
 		}
-		return path;
+		return fileName;
 	}
 	public static String getValue(String path, String key)
 	{

@@ -5,19 +5,19 @@
       <![CDATA[testVerifyProdcutVersion Is Failed]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-07-19T10:03:45Z" name="Default suite" finished-at="2018-07-19T10:04:02Z" duration-ms="16765">
+  <suite started-at="2018-07-20T09:50:18Z" name="Default suite" finished-at="2018-07-20T09:50:35Z" duration-ms="17609">
     <groups>
       <group name="login">
         <method signature="VerifyProductVersion.testVerifyProdcutVersion()[pri:3, instance:script.VerifyProductVersion@672872e1]" name="testVerifyProdcutVersion" class="script.VerifyProductVersion"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2018-07-19T10:03:45Z" name="Default test" finished-at="2018-07-19T10:04:02Z" duration-ms="16765">
+    <test started-at="2018-07-20T09:50:18Z" name="Default test" finished-at="2018-07-20T09:50:35Z" duration-ms="17609">
       <class name="script.VerifyProductVersion">
-        <test-method is-config="true" signature="OpenApp()[pri:0, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-19T10:03:45Z" name="OpenApp" finished-at="2018-07-19T10:03:52Z" duration-ms="7008" status="PASS">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-20T09:50:18Z" name="OpenApp" finished-at="2018-07-20T09:50:25Z" duration-ms="7685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method signature="testVerifyProdcutVersion()[pri:3, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-19T10:03:52Z" name="testVerifyProdcutVersion" finished-at="2018-07-19T10:03:59Z" duration-ms="7049" status="FAIL">
+        <test-method signature="testVerifyProdcutVersion()[pri:3, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-20T09:50:25Z" name="testVerifyProdcutVersion" finished-at="2018-07-20T09:50:32Z" duration-ms="7223" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [actiTIME 2017.2] but found [actiTIME 2017.4]]]>
@@ -63,7 +63,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVerifyProdcutVersion -->
-        <test-method is-config="true" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-19T10:03:59Z" name="CloseApp" finished-at="2018-07-19T10:04:02Z" duration-ms="2687" status="PASS">
+        <test-method is-config="true" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-20T09:50:32Z" name="CloseApp" finished-at="2018-07-20T09:50:35Z" duration-ms="2662" status="PASS">
           <params>
             <param index="0">
               <value>
