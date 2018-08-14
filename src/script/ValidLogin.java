@@ -9,7 +9,7 @@ import page.LoginPage;
 
 public class ValidLogin extends BaseTest
 {
-	@Test(priority=1,groups= {"login"})
+	@Test(priority=3,groups= {"login"})
 	public void testValidLogin()
 	{
 		int rc=Excel_Data.getRowCount(EXCEL_PATH, "UserDetails");

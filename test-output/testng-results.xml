@@ -1,37 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[testInvalidLogin Is Passed]]>
+    </line>
     <line>
       <![CDATA[testVerifyProdcutVersion Is Failed]]>
     </line>
+    <line>
+      <![CDATA[testValidLogin Is Passed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-07-20T09:50:18Z" name="Default suite" finished-at="2018-07-20T09:50:35Z" duration-ms="17609">
+  <suite started-at="2018-08-14T13:20:40Z" name="Suite" finished-at="2018-08-14T13:21:20Z" duration-ms="39792">
     <groups>
       <group name="login">
-        <method signature="VerifyProductVersion.testVerifyProdcutVersion()[pri:3, instance:script.VerifyProductVersion@672872e1]" name="testVerifyProdcutVersion" class="script.VerifyProductVersion"/>
+        <method signature="InvalidLogin.testInvalidLogin()[pri:1, instance:script.InvalidLogin@3e96bacf]" name="testInvalidLogin" class="script.InvalidLogin"/>
+        <method signature="ValidLogin.testValidLogin()[pri:3, instance:script.ValidLogin@fd07cbb]" name="testValidLogin" class="script.ValidLogin"/>
+        <method signature="VerifyProductVersion.testVerifyProdcutVersion()[pri:2, instance:script.VerifyProductVersion@3571b748]" name="testVerifyProdcutVersion" class="script.VerifyProductVersion"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2018-07-20T09:50:18Z" name="Default test" finished-at="2018-07-20T09:50:35Z" duration-ms="17609">
-      <class name="script.VerifyProductVersion">
-        <test-method is-config="true" signature="OpenApp()[pri:0, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-20T09:50:18Z" name="OpenApp" finished-at="2018-07-20T09:50:25Z" duration-ms="7685" status="PASS">
+    <test started-at="2018-08-14T13:20:40Z" name="Test" finished-at="2018-08-14T13:21:20Z" duration-ms="39792">
+      <class name="script.InvalidLogin">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:script.InvalidLogin@3e96bacf]" started-at="2018-08-14T13:20:40Z" name="OpenApp" finished-at="2018-08-14T13:20:48Z" duration-ms="8353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method signature="testVerifyProdcutVersion()[pri:3, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-20T09:50:25Z" name="testVerifyProdcutVersion" finished-at="2018-07-20T09:50:32Z" duration-ms="7223" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="testInvalidLogin()[pri:1, instance:script.InvalidLogin@3e96bacf]" started-at="2018-08-14T13:20:48Z" name="testInvalidLogin" finished-at="2018-08-14T13:20:56Z" duration-ms="7957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method is-config="true" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:script.InvalidLogin@3e96bacf]" started-at="2018-08-14T13:20:56Z" name="CloseApp" finished-at="2018-08-14T13:20:58Z" duration-ms="2130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidLogin status=SUCCESS method=InvalidLogin.testInvalidLogin()[pri:1, instance:script.InvalidLogin@3e96bacf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[testInvalidLogin Is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+      </class> <!-- script.InvalidLogin -->
+      <class name="script.VerifyProductVersion">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:script.VerifyProductVersion@3571b748]" started-at="2018-08-14T13:20:58Z" name="OpenApp" finished-at="2018-08-14T13:21:05Z" duration-ms="6423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method signature="testVerifyProdcutVersion()[pri:2, instance:script.VerifyProductVersion@3571b748]" started-at="2018-08-14T13:21:05Z" name="testVerifyProdcutVersion" finished-at="2018-08-14T13:21:09Z" duration-ms="3819" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [actiTIME 2017.2] but found [actiTIME 2017.4]]]>
+              <![CDATA[unknown error: Element <div class="popup_menu_label">...</div> is not clickable at point (1259, 68). Other element would receive the click: <div id="preInsertedTransformedMoireId" class="transformedMoireClass" style="transition: opacity 600ms ease-in-out; opacity: 0;"></div>
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'BLRIDC30192062', ip: '192.168.43.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\vmutalik\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: 7d7e110fc9a375d87305ae18d3376f49]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [actiTIME 2017.2] but found [actiTIME 2017.4]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at page.EnterPage.verifyProductVersion(EnterPage.java:42)
-at script.VerifyProductVersion.testVerifyProdcutVersion(VerifyProductVersion.java:33)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <div class="popup_menu_label">...</div> is not clickable at point (1259, 68). Other element would receive the click: <div id="preInsertedTransformedMoireId" class="transformedMoireClass" style="transition: opacity 600ms ease-in-out; opacity: 0;"></div>
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'BLRIDC30192062', ip: '192.168.43.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\vmutalik\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: 7d7e110fc9a375d87305ae18d3376f49
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy12.click(Unknown Source)
+at page.EnterPage.clickHelp(EnterPage.java:31)
+at script.VerifyProductVersion.testVerifyProdcutVersion(VerifyProductVersion.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,15 +121,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVerifyProdcutVersion -->
-        <test-method is-config="true" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:script.VerifyProductVersion@672872e1]" started-at="2018-07-20T09:50:32Z" name="CloseApp" finished-at="2018-07-20T09:50:35Z" duration-ms="2662" status="PASS">
+        <test-method is-config="true" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:script.VerifyProductVersion@3571b748]" started-at="2018-08-14T13:21:09Z" name="CloseApp" finished-at="2018-08-14T13:21:11Z" duration-ms="2665" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testVerifyProdcutVersion status=FAILURE method=VerifyProductVersion.testVerifyProdcutVersion()[pri:3, instance:script.VerifyProductVersion@672872e1] output={null}]]]>
+                <![CDATA[[TestResult name=testVerifyProdcutVersion status=FAILURE method=VerifyProductVersion.testVerifyProdcutVersion()[pri:2, instance:script.VerifyProductVersion@3571b748] output={null}]]]>
               </value>
             </param>
           </params>
@@ -78,6 +140,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- CloseApp -->
       </class> <!-- script.VerifyProductVersion -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="script.ValidLogin">
+        <test-method is-config="true" signature="OpenApp()[pri:0, instance:script.ValidLogin@fd07cbb]" started-at="2018-08-14T13:21:11Z" name="OpenApp" finished-at="2018-08-14T13:21:17Z" duration-ms="5805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method signature="testValidLogin()[pri:3, instance:script.ValidLogin@fd07cbb]" started-at="2018-08-14T13:21:17Z" name="testValidLogin" finished-at="2018-08-14T13:21:17Z" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="CloseApp(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@fd07cbb]" started-at="2018-08-14T13:21:17Z" name="CloseApp" finished-at="2018-08-14T13:21:20Z" duration-ms="2337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin()[pri:3, instance:script.ValidLogin@fd07cbb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[testValidLogin Is Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CloseApp -->
+      </class> <!-- script.ValidLogin -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
